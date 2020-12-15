@@ -1,0 +1,261 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-15T23:53:14.455Z",
+    "end": "2020-12-15T23:53:25.801Z",
+    "duration": 11346,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "98debe5d-bcaa-411e-abb3-a009e269d0fa",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\contact_save_spec.js",
+      "file": "tests\\e2e\\specs\\contact_save_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9773cb9d-6a4e-4fe3-a278-4829c25f0aa1",
+          "title": "Cadastro de Contatos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "d6aee473-a0b8-41b3-b10a-d8ae8a6f8bbd",
+              "title": "Novo Contato",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "180172f0-8bfb-49cd-8ac3-52f145d4eb12",
+                  "title": "Quando submeto o cadastro completo",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve cadastrar esse contato",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro completo Deve cadastrar esse contato",
+                      "timedOut": null,
+                      "duration": 4087,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "\"assets/screenshots/contact_save_spec.js/Deve cadastrar esse contato -- after each hook.png\"",
+                      "code": "cy.contactList().contains(contact.name);",
+                      "err": {},
+                      "uuid": "cee1c55f-a2e6-43f0-8fdd-218721728976",
+                      "parentUUID": "180172f0-8bfb-49cd-8ac3-52f145d4eb12",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "cee1c55f-a2e6-43f0-8fdd-218721728976"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 4087,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "beaca4a8-40dc-4176-b7f2-e9aad1b28d94",
+                  "title": "Quando submeto o cadastro sem o nome",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve exibir a notificação Nome  Obrigatrio",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o nome Deve exibir a notificação Nome  Obrigatrio",
+                      "timedOut": null,
+                      "duration": 1803,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "\"assets/screenshots/contact_save_spec.js/Deve exibir a notificação Nome  Obrigatrio -- after each hook.png\"",
+                      "code": "cy.alertName().contains(expectNotice);",
+                      "err": {},
+                      "uuid": "3c6f154b-bd9f-4f60-9cdc-31ea4abe2329",
+                      "parentUUID": "beaca4a8-40dc-4176-b7f2-e9aad1b28d94",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "3c6f154b-bd9f-4f60-9cdc-31ea4abe2329"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 1803,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "d791334f-c730-4e7c-bb81-608e8a855c36",
+                  "title": "Quando submeto o cadastro sem o whatsapp",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve exibir a notificação Whatsapp  Obrigatrio",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o whatsapp Deve exibir a notificação Whatsapp  Obrigatrio",
+                      "timedOut": null,
+                      "duration": 1583,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "\"assets/screenshots/contact_save_spec.js/Deve exibir a notificação Whatsapp  Obrigatrio -- after each hook.png\"",
+                      "code": "cy.alertNumber().contains(expectNotice);",
+                      "err": {},
+                      "uuid": "1ea1e600-5b8b-4a7d-b1e8-9ef00ffb2e35",
+                      "parentUUID": "d791334f-c730-4e7c-bb81-608e8a855c36",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "1ea1e600-5b8b-4a7d-b1e8-9ef00ffb2e35"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 1583,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "4d8ba77e-319d-4f17-a14c-b615e35b3320",
+                  "title": "Quando submeto o cadastro sem o assunto",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve exibir a notificação Assunto  Obrigatrio",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o assunto Deve exibir a notificação Assunto  Obrigatrio",
+                      "timedOut": null,
+                      "duration": 1095,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "\"assets/screenshots/contact_save_spec.js/Deve exibir a notificação Assunto  Obrigatrio -- after each hook.png\"",
+                      "code": "cy.alertDesc().contains(expectNotice);",
+                      "err": {},
+                      "uuid": "989f7a91-73dd-4043-9e20-54ee1abbd2e3",
+                      "parentUUID": "4d8ba77e-319d-4f17-a14c-b615e35b3320",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "989f7a91-73dd-4043-9e20-54ee1abbd2e3"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 1095,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-15T23:10:41.521Z",
-    "end": "2020-12-15T23:10:48.411Z",
-    "duration": 6890,
+    "start": "2020-12-15T23:53:53.590Z",
+    "end": "2020-12-15T23:54:00.952Z",
+    "duration": 7362,
     "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "34c9dee9-1dd6-420c-a91d-9622535075db",
+      "uuid": "aa033eb8-5509-4a5c-bd23-340b0a3735dc",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\login_spec.js",
       "file": "tests\\e2e\\specs\\login_spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "16cdf63c-3555-4602-a044-b3dafbc60a5a",
+          "uuid": "4ad0bb42-5e41-4df4-a75a-f46a77e89afd",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e937aed8-ec7c-4ba6-8ac0-6546104eb1b0",
+              "uuid": "a199592e-aff4-440f-9e8e-45c014cb1ab8",
               "title": "Quando submeto credenciais validas",
               "fullFile": "",
               "file": "",
@@ -47,35 +47,35 @@
                   "title": "Deve exibir a área logada",
                   "fullTitle": "Login Quando submeto credenciais validas Deve exibir a área logada",
                   "timedOut": null,
-                  "duration": 1944,
+                  "duration": 2086,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
-                  "context": null,
+                  "context": "\"assets/screenshots/login_spec.js/Deve exibir a área logada -- after each hook.png\"",
                   "code": "cy.contains('h4', 'Seu gerenciador digital de contatos').should('be.visible');",
                   "err": {},
-                  "uuid": "9cd6fff2-2bc3-4ae2-beb0-5d69978591bd",
-                  "parentUUID": "e937aed8-ec7c-4ba6-8ac0-6546104eb1b0",
+                  "uuid": "702412b8-7efe-48d5-a617-0fb9fe07ed95",
+                  "parentUUID": "a199592e-aff4-440f-9e8e-45c014cb1ab8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "9cd6fff2-2bc3-4ae2-beb0-5d69978591bd"
+                "702412b8-7efe-48d5-a617-0fb9fe07ed95"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1944,
+              "duration": 2086,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "96171f07-2b2b-433b-8a17-0146ad5cb8a3",
+              "uuid": "34a16670-50a2-4dab-8aae-a35712aa44f4",
               "title": "Quando submeto senha incorreta",
               "fullFile": "",
               "file": "",
@@ -86,35 +86,35 @@
                   "title": "Deve exibir Email eou senha incorretos",
                   "fullTitle": "Login Quando submeto senha incorreta Deve exibir Email eou senha incorretos",
                   "timedOut": null,
-                  "duration": 1142,
+                  "duration": 1208,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
-                  "context": null,
+                  "context": "\"assets/screenshots/login_spec.js/Deve exibir Email eou senha incorretos -- after each hook.png\"",
                   "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "0bd3190c-a421-41c5-9309-ac46d1297830",
-                  "parentUUID": "96171f07-2b2b-433b-8a17-0146ad5cb8a3",
+                  "uuid": "dada9b2e-be6c-4ca6-a118-95ac44298a9b",
+                  "parentUUID": "34a16670-50a2-4dab-8aae-a35712aa44f4",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "0bd3190c-a421-41c5-9309-ac46d1297830"
+                "dada9b2e-be6c-4ca6-a118-95ac44298a9b"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1142,
+              "duration": 1208,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "d655846a-2070-45c5-bf76-b64692da474e",
+              "uuid": "b8df7560-b888-420b-bfd2-cf4e3f85b520",
               "title": "Quando não informo o email",
               "fullFile": "",
               "file": "",
@@ -125,35 +125,35 @@
                   "title": "Deve exibir Oops. Por favor informe o seu email",
                   "fullTitle": "Login Quando não informo o email Deve exibir Oops. Por favor informe o seu email",
                   "timedOut": null,
-                  "duration": 666,
+                  "duration": 702,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
-                  "context": null,
+                  "context": "\"assets/screenshots/login_spec.js/Deve exibir Oops. Por favor informe o seu email -- after each hook.png\"",
                   "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "73860425-647e-4348-b983-059993513435",
-                  "parentUUID": "d655846a-2070-45c5-bf76-b64692da474e",
+                  "uuid": "4bb79374-cc78-43ed-a771-54367ad7e4ad",
+                  "parentUUID": "b8df7560-b888-420b-bfd2-cf4e3f85b520",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "73860425-647e-4348-b983-059993513435"
+                "4bb79374-cc78-43ed-a771-54367ad7e4ad"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 666,
+              "duration": 702,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "9c0f14e3-4897-43b7-b881-0e869084bd73",
+              "uuid": "2005232a-c17a-4c93-930e-013cab857f46",
               "title": "Quando não informo a senha",
               "fullFile": "",
               "file": "",
@@ -164,29 +164,29 @@
                   "title": "Deve exibir Oops. Por favor informe sua senha",
                   "fullTitle": "Login Quando não informo a senha Deve exibir Oops. Por favor informe sua senha",
                   "timedOut": null,
-                  "duration": 833,
+                  "duration": 763,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
-                  "context": null,
+                  "context": "\"assets/screenshots/login_spec.js/Deve exibir Oops. Por favor informe sua senha -- after each hook.png\"",
                   "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "bb43faa1-b254-4c0d-a8e6-11f05a398c1d",
-                  "parentUUID": "9c0f14e3-4897-43b7-b881-0e869084bd73",
+                  "uuid": "9b0a529d-c46e-493a-97e4-e15d20a698d3",
+                  "parentUUID": "2005232a-c17a-4c93-930e-013cab857f46",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "bb43faa1-b254-4c0d-a8e6-11f05a398c1d"
+                "9b0a529d-c46e-493a-97e4-e15d20a698d3"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 833,
+              "duration": 763,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
