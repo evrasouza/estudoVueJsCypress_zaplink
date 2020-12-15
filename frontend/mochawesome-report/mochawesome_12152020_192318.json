@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-15T22:23:13.027Z",
+    "end": "2020-12-15T22:23:18.557Z",
+    "duration": 5530,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "419a0a5c-4dcc-4905-b779-10c205cbc073",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\contact_remove_spec.js",
+      "file": "tests\\e2e\\specs\\contact_remove_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a332909b-84c5-4b0c-b44d-6a7d12ae3c88",
+          "title": "Remover Contato",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+              "title": "Dado que Paulo Gilberto é um contato indesejado",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando eu apago esse contato",
+                  "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Quando eu apago esse contato",
+                  "timedOut": null,
+                  "duration": 3752,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dash();\ncy.removeContact(contact.number);",
+                  "err": {},
+                  "uuid": "bf398f53-c333-4f8d-a1b0-2c7865f3e059",
+                  "parentUUID": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Não deve exibir no dashboard",
+                  "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Não deve exibir no dashboard",
+                  "timedOut": null,
+                  "duration": 49,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.getContact(contact.number).should('not.visible');",
+                  "err": {},
+                  "uuid": "ec993599-edb1-4d71-a9ad-2b63fc39cc25",
+                  "parentUUID": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "bf398f53-c333-4f8d-a1b0-2c7865f3e059",
+                "ec993599-edb1-4d71-a9ad-2b63fc39cc25"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3801,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

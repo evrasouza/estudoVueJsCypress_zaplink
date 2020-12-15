@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-15T22:23:59.706Z",
+    "end": "2020-12-15T22:24:04.034Z",
+    "duration": 4328,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a6e80518-5957-4b04-955e-f82619cc5dfa",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\contact_talk_spec.js",
+      "file": "tests\\e2e\\specs\\contact_talk_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c86e7636-1780-4fe4-b025-ed9c9e682664",
+          "title": "Conversar",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+              "title": "Dado que Jo Jo Todynho é um bom contato",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando acesso o dashboard",
+                  "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Quando acesso o dashboard",
+                  "timedOut": null,
+                  "duration": 2606,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dash();",
+                  "err": {},
+                  "uuid": "e5d8cac2-0619-437c-b50f-fdcbd48faf54",
+                  "parentUUID": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Devo ver a propriedade href com o link do whatsapp web",
+                  "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Devo ver a propriedade href com o link do whatsapp web",
+                  "timedOut": null,
+                  "duration": 55,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "var externalLink = \"https://api.whatsapp.com/send?phone=55\".concat(contact.number);\ncy.get(\"a[href$=\\\"\".concat(contact.number, \"\\\"]\")).should('have.attr', 'href', externalLink);",
+                  "err": {},
+                  "uuid": "47e7f824-2b38-45e8-a814-f2531e132018",
+                  "parentUUID": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e5d8cac2-0619-437c-b50f-fdcbd48faf54",
+                "47e7f824-2b38-45e8-a814-f2531e132018"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2661,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
