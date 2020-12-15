@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-15T23:07:49.634Z",
+    "end": "2020-12-15T23:07:59.275Z",
+    "duration": 9641,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "85e587ba-81fb-469b-bd1c-be16d73ba35f",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\login_spec.js",
+      "file": "tests\\e2e\\specs\\login_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "200f8a60-9b63-408d-9690-cbc00cfed73e",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "532b09da-6cac-44aa-a961-c1ca16baf350",
+              "title": "Quando submeto credenciais validas",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir a área logada",
+                  "fullTitle": "Login Quando submeto credenciais validas Deve exibir a área logada",
+                  "timedOut": null,
+                  "duration": 4482,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('h4', 'Seu gerenciador digital de contatos').should('be.visible');",
+                  "err": {},
+                  "uuid": "44b2782e-d557-4dfe-8e98-53f9fab6000d",
+                  "parentUUID": "532b09da-6cac-44aa-a961-c1ca16baf350",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "44b2782e-d557-4dfe-8e98-53f9fab6000d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 4482,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ad766f9b-423c-41ab-85d6-d434b55e8f2f",
+              "title": "Quando submeto senha incorreta",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir Email eou senha incorretos",
+                  "fullTitle": "Login Quando submeto senha incorreta Deve exibir Email eou senha incorretos",
+                  "timedOut": null,
+                  "duration": 1140,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
+                  "err": {},
+                  "uuid": "44457e5c-bd43-42b5-b143-6517b7085f61",
+                  "parentUUID": "ad766f9b-423c-41ab-85d6-d434b55e8f2f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "44457e5c-bd43-42b5-b143-6517b7085f61"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1140,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3c6bb893-5e41-477d-a5f7-f67ea5a5b389",
+              "title": "Quando não informo o email",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir Oops. Por favor informe o seu email",
+                  "fullTitle": "Login Quando não informo o email Deve exibir Oops. Por favor informe o seu email",
+                  "timedOut": null,
+                  "duration": 673,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
+                  "err": {},
+                  "uuid": "0f7a58cc-a564-453f-b915-09723fc2179a",
+                  "parentUUID": "3c6bb893-5e41-477d-a5f7-f67ea5a5b389",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0f7a58cc-a564-453f-b915-09723fc2179a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 673,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "90f33f72-facf-4b67-aeb8-bd4a0f256e8c",
+              "title": "Quando não informo a senha",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir Oops. Por favor informe sua senha",
+                  "fullTitle": "Login Quando não informo a senha Deve exibir Oops. Por favor informe sua senha",
+                  "timedOut": null,
+                  "duration": 826,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
+                  "err": {},
+                  "uuid": "abaf25d2-fd19-443a-82a6-eba0d9f4efea",
+                  "parentUUID": "90f33f72-facf-4b67-aeb8-bd4a0f256e8c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "abaf25d2-fd19-443a-82a6-eba0d9f4efea"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 826,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

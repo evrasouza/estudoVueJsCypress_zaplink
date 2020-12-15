@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-15T22:23:47.912Z",
-    "end": "2020-12-15T22:23:53.505Z",
-    "duration": 5593,
+    "start": "2020-12-15T23:10:24.053Z",
+    "end": "2020-12-15T23:10:29.245Z",
+    "duration": 5192,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "bad12194-c2a4-42fb-ac4d-a60657ac8fc7",
+      "uuid": "c7d5989d-e6dd-4a3f-a2ef-f9817979ca41",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\contact_search_spec.js",
       "file": "tests\\e2e\\specs\\contact_search_spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6ac607da-07c5-4094-8614-510efc710392",
+          "uuid": "86444a08-1d5d-494d-9f90-c3c14dd5f9a5",
           "title": "Busca",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "a8a1be5f-23cd-48e3-8d62-84be4adadc27",
+              "uuid": "37fd14d3-b4a5-4924-a68f-c23f5498d27a",
               "title": "Dado que eu tenho o seguinte contato Mike Portnoy",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Quando eu faço a busca desse contato",
                   "fullTitle": "Busca Dado que eu tenho o seguinte contato Mike Portnoy Quando eu faço a busca desse contato",
                   "timedOut": null,
-                  "duration": 2835,
+                  "duration": 2608,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.dash();\ncy.searchContact(contact.number);\ncy.get('#loader', {\n  timeout: 5000\n}).should('not.visible');",
                   "err": {},
-                  "uuid": "a4206043-81b2-4dc1-bbfe-1e5ee1d6267f",
-                  "parentUUID": "a8a1be5f-23cd-48e3-8d62-84be4adadc27",
+                  "uuid": "dd600299-21ff-42a0-9d4f-61c07359059e",
+                  "parentUUID": "37fd14d3-b4a5-4924-a68f-c23f5498d27a",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,7 +65,7 @@
                   "title": "Devo ver somente este contato no dashboard",
                   "fullTitle": "Busca Dado que eu tenho o seguinte contato Mike Portnoy Devo ver somente este contato no dashboard",
                   "timedOut": null,
-                  "duration": 58,
+                  "duration": 47,
                   "state": "passed",
                   "speed": "medium",
                   "pass": true,
@@ -74,27 +74,27 @@
                   "context": null,
                   "code": "cy.contactItem().should('have.length', 1);\ncy.contactItem().contains(contact.name);\ncy.contactItem().contains(contact.number);\ncy.contactItem().contains(contact.description);",
                   "err": {},
-                  "uuid": "a2392dcd-bccc-4d88-9697-9ca4fe671ce1",
-                  "parentUUID": "a8a1be5f-23cd-48e3-8d62-84be4adadc27",
+                  "uuid": "95e99939-2822-41cc-91b5-b1d76fdd1734",
+                  "parentUUID": "37fd14d3-b4a5-4924-a68f-c23f5498d27a",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "a4206043-81b2-4dc1-bbfe-1e5ee1d6267f",
-                "a2392dcd-bccc-4d88-9697-9ca4fe671ce1"
+                "dd600299-21ff-42a0-9d4f-61c07359059e",
+                "95e99939-2822-41cc-91b5-b1d76fdd1734"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 2893,
+              "duration": 2655,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "4a1c3990-a924-4935-8442-485bddc3f611",
+              "uuid": "78cc7f25-3744-4ada-9da1-236632485f09",
               "title": "Dado busco por um contato não cadastrado",
               "fullFile": "",
               "file": "",
@@ -105,7 +105,7 @@
                   "title": "Deve retornar mensagem de alerta",
                   "fullTitle": "Busca Dado busco por um contato não cadastrado Deve retornar mensagem de alerta",
                   "timedOut": null,
-                  "duration": 861,
+                  "duration": 707,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -114,20 +114,20 @@
                   "context": null,
                   "code": "cy.get('.message-body').contains('Contato não encontrado :(');",
                   "err": {},
-                  "uuid": "2d70585a-0bc2-4b5c-81ee-23dabd89e1a8",
-                  "parentUUID": "4a1c3990-a924-4935-8442-485bddc3f611",
+                  "uuid": "56eab881-9aca-4bb9-a9ef-2cb9de7e560a",
+                  "parentUUID": "78cc7f25-3744-4ada-9da1-236632485f09",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "2d70585a-0bc2-4b5c-81ee-23dabd89e1a8"
+                "56eab881-9aca-4bb9-a9ef-2cb9de7e560a"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 861,
+              "duration": 707,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

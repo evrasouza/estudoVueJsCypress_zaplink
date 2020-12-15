@@ -1,13 +1,12 @@
-
 describe('Login', () => {
 
-    const user = { email: 'rafael@gmail.com', password: 'pwd123'}
+    const user = { email: 'fernando@qaninja.com.br', password: 'pwd123' }
 
     before(()=> {
         cy.request({
             method: 'POST',
             url: 'http://localhost:3000/user',
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: user,
             failOnStatusCode: false
         }).then((response) => {
@@ -15,46 +14,54 @@ describe('Login', () => {
         })
     })
 
-    context('Quando submeto credenciais validas', () => {
+    context('Quando submeto credenciais validas', ()=> {
         before(()=> {
             cy.doLogin(user.email, user.password)
         })
 
-        it('deve exibir o dashboard', () => {
+        it('Deve exibir a área logada', ()=> {
             cy.contains('h4', 'Seu gerenciador digital de contatos').should('be.visible')
         })
     })
 
-    context("Quando submeto uma seha incorreta", () => {
+    context('Quando submeto senha incorreta', () => {
+
+        const expectMessage = 'Email e/ou senha incorretos!'
+
         before(()=> {
             cy.doLogin(user.email, 'abc123')
         })
 
-        it('deve exibir o dashboard', () => {
-            cy.loginAlert('Email e/ou senha incorretos!').should('be.visible')
+        it(`Deve exibir ${expectMessage.replace(/[^a-zA-Z ]/g, '')}`, ()=> {
+            cy.loginAlert(expectMessage).should('be.visible')
         })
     })
 
-    context("Quando não informo o email", () => {
+    context('Quando não informo o email', () => {
+
+        const expectMessage = 'Oops. Por favor informe o seu email'
+
         before(()=> {
             cy.doLogin('', user.password)
         })
 
-        it('deve exibir o dashboard', () => {
-            cy.loginAlert('Oops. Por favor informe o seu email').should('be.visible')
+        it(`Deve exibir ${expectMessage}`, ()=> {
+            cy.loginAlert(expectMessage).should('be.visible')
         })
-        
     })
 
-    context("Quando não informo a senha", () => {
+    context('Quando não informo a senha', () => {
+
+        const expectMessage = 'Oops. Por favor informe sua senha'
+
         before(()=> {
             cy.doLogin(user.email, '')
         })
 
-        it('deve exibir o dashboard', () => {
-            cy.loginAlert('Oops. Por favor informe sua senha').should('be.visible')
+        it(`Deve exibir ${expectMessage}`, ()=> {
+            cy.loginAlert(expectMessage).should('be.visible')
         })
-        
     })
+
 
 })

@@ -42,13 +42,15 @@ describe('Cadastro de Contatos', () => {
                 description: 'Solicitar orçamento para Consultoria em QA e DevOps.'
             }
 
+            const expectNotice = 'Nome é obrigatório'
+
             before(() => {
                 cy.dash()
                 cy.createContact(contact)
             })
 
-            it('Deve deve mostrar uma notificação', () => {
-                cy.alertName().contains('Nome é Obrigatório')
+            it('Deve exibir a notificação: ${expectNotice}', () => {
+                cy.alertName().contains(expectNotice)
             })
         })
 
@@ -57,13 +59,16 @@ describe('Cadastro de Contatos', () => {
                 name: 'Everton Rafael de Souza',
                 description: 'Solicitar orçamento para Consultoria em QA e DevOps.'
             }
+
+            const expectNotice = 'WhatsApp é obrigatório'
+
             before(() => {
                 cy.dash()
                 cy.createContact(contact)
             })
 
-            it('Deve deve mostrar uma notificação', () => {
-                cy.alertNumber().contains('Whatsapp é Obrigatório')
+            it('Deve exibir a notificação: ${expectNotice}', () => {
+                cy.alertNumber().contains(expectNotice)
             })
         })
 
@@ -72,13 +77,16 @@ describe('Cadastro de Contatos', () => {
                 name: 'Everton Rafael de Souza',
                 number: '199999999999'
             }
+
+            const expectNotice = 'Assunto é obrigatório.'
+            
             before(() => {
                 cy.dash()
                 cy.createContact(contact)
             })
 
-            it('Deve deve mostrar uma notificação', () => {
-                cy.alertDesc().contains('Assunto é Obrigatório')
+            it('Deve exibir a notificação: ${expectNotice}', () => {
+                cy.alertDesc().contains(expectNotice)
             })
         })
     })

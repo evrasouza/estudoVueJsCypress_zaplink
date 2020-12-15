@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-15T22:23:13.027Z",
-    "end": "2020-12-15T22:23:18.557Z",
-    "duration": 5530,
+    "start": "2020-12-15T23:09:40.095Z",
+    "end": "2020-12-15T23:09:44.392Z",
+    "duration": 4297,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "419a0a5c-4dcc-4905-b779-10c205cbc073",
+      "uuid": "f290815f-58e8-4e0d-b1ef-d69f41301e7c",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\contact_remove_spec.js",
       "file": "tests\\e2e\\specs\\contact_remove_spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a332909b-84c5-4b0c-b44d-6a7d12ae3c88",
+          "uuid": "b2916724-c6b8-4328-a3b3-5093c318eee3",
           "title": "Remover Contato",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+              "uuid": "a6ddfb8b-8bd6-4d88-9717-f2ea6293d570",
               "title": "Dado que Paulo Gilberto é um contato indesejado",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Quando eu apago esse contato",
                   "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Quando eu apago esse contato",
                   "timedOut": null,
-                  "duration": 3752,
+                  "duration": 2727,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.dash();\ncy.removeContact(contact.number);",
                   "err": {},
-                  "uuid": "bf398f53-c333-4f8d-a1b0-2c7865f3e059",
-                  "parentUUID": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+                  "uuid": "3c76e675-68d6-46d7-af6e-622ed899ede2",
+                  "parentUUID": "a6ddfb8b-8bd6-4d88-9717-f2ea6293d570",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,30 +65,30 @@
                   "title": "Não deve exibir no dashboard",
                   "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Não deve exibir no dashboard",
                   "timedOut": null,
-                  "duration": 49,
+                  "duration": 32,
                   "state": "passed",
-                  "speed": "medium",
+                  "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.getContact(contact.number).should('not.visible');",
                   "err": {},
-                  "uuid": "ec993599-edb1-4d71-a9ad-2b63fc39cc25",
-                  "parentUUID": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+                  "uuid": "f8a89f58-d7c7-4eed-a2a3-0877e1b7b886",
+                  "parentUUID": "a6ddfb8b-8bd6-4d88-9717-f2ea6293d570",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "bf398f53-c333-4f8d-a1b0-2c7865f3e059",
-                "ec993599-edb1-4d71-a9ad-2b63fc39cc25"
+                "3c76e675-68d6-46d7-af6e-622ed899ede2",
+                "f8a89f58-d7c7-4eed-a2a3-0877e1b7b886"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 3801,
+              "duration": 2759,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

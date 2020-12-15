@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-15T22:23:59.706Z",
-    "end": "2020-12-15T22:24:04.034Z",
-    "duration": 4328,
+    "start": "2020-12-15T23:10:33.735Z",
+    "end": "2020-12-15T23:10:36.816Z",
+    "duration": 3081,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a6e80518-5957-4b04-955e-f82619cc5dfa",
+      "uuid": "0276ed74-255f-42a7-997a-f63c82929784",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\contact_talk_spec.js",
       "file": "tests\\e2e\\specs\\contact_talk_spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c86e7636-1780-4fe4-b025-ed9c9e682664",
+          "uuid": "ba0e3cb3-ebe5-48fa-b122-70dd9ae0eac2",
           "title": "Conversar",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+              "uuid": "9117919f-bd72-4e1a-839a-b231239844fd",
               "title": "Dado que Jo Jo Todynho é um bom contato",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Quando acesso o dashboard",
                   "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Quando acesso o dashboard",
                   "timedOut": null,
-                  "duration": 2606,
+                  "duration": 1746,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "cy.dash();",
                   "err": {},
-                  "uuid": "e5d8cac2-0619-437c-b50f-fdcbd48faf54",
-                  "parentUUID": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+                  "uuid": "8e4a35fc-59c2-434a-810a-28b3a41bf46b",
+                  "parentUUID": "9117919f-bd72-4e1a-839a-b231239844fd",
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,30 +65,30 @@
                   "title": "Devo ver a propriedade href com o link do whatsapp web",
                   "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Devo ver a propriedade href com o link do whatsapp web",
                   "timedOut": null,
-                  "duration": 55,
+                  "duration": 17,
                   "state": "passed",
-                  "speed": "medium",
+                  "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "var externalLink = \"https://api.whatsapp.com/send?phone=55\".concat(contact.number);\ncy.get(\"a[href$=\\\"\".concat(contact.number, \"\\\"]\")).should('have.attr', 'href', externalLink);",
                   "err": {},
-                  "uuid": "47e7f824-2b38-45e8-a814-f2531e132018",
-                  "parentUUID": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+                  "uuid": "203ec8b7-e7a4-449e-a933-5fd45816d0fd",
+                  "parentUUID": "9117919f-bd72-4e1a-839a-b231239844fd",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "e5d8cac2-0619-437c-b50f-fdcbd48faf54",
-                "47e7f824-2b38-45e8-a814-f2531e132018"
+                "8e4a35fc-59c2-434a-810a-28b3a41bf46b",
+                "203ec8b7-e7a4-449e-a933-5fd45816d0fd"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 2661,
+              "duration": 1763,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

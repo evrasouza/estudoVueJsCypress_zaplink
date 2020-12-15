@@ -1,24 +1,24 @@
 {
   "stats": {
-    "suites": 5,
-    "tests": 15,
-    "passes": 15,
+    "suites": 10,
+    "tests": 30,
+    "passes": 16,
     "pending": 0,
-    "failures": 0,
-    "start": "2020-12-15T22:23:13.027Z",
-    "end": "2020-12-15T22:24:16.350Z",
-    "duration": 24292,
-    "testsRegistered": 15,
-    "passPercent": 100,
+    "failures": 7,
+    "start": "2020-12-15T23:05:06.485Z",
+    "end": "2020-12-15T23:10:48.411Z",
+    "duration": 161190,
+    "testsRegistered": 30,
+    "passPercent": 53.333333333333336,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 7,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "419a0a5c-4dcc-4905-b779-10c205cbc073",
+      "uuid": "b0dd8f83-05a8-47cf-9313-3cc7cfd56fe2",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\contact_remove_spec.js",
       "file": "tests\\e2e\\specs\\contact_remove_spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a332909b-84c5-4b0c-b44d-6a7d12ae3c88",
+          "uuid": "60e5fd03-4dc2-4075-b837-d38d211bd8b3",
           "title": "Remover Contato",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+              "uuid": "12baf274-4ed5-41c7-8f68-15fec510ea6b",
               "title": "Dado que Paulo Gilberto é um contato indesejado",
               "fullFile": "",
               "file": "",
@@ -47,17 +47,21 @@
                   "title": "Quando eu apago esse contato",
                   "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Quando eu apago esse contato",
                   "timedOut": null,
-                  "duration": 3752,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
+                  "duration": 30120,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.dash();\ncy.removeContact(contact.number);",
-                  "err": {},
-                  "uuid": "bf398f53-c333-4f8d-a1b0-2c7865f3e059",
-                  "parentUUID": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+                  "err": {
+                    "message": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Remover Contato'",
+                    "estack": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Remover Contato'\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:72513:23\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:115344:41\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "4531930a-c2fa-4d3e-b4b9-0cca1a981f4f",
+                  "parentUUID": null,
                   "isHook": false,
                   "skipped": false
                 },
@@ -65,30 +69,31 @@
                   "title": "Não deve exibir no dashboard",
                   "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Não deve exibir no dashboard",
                   "timedOut": null,
-                  "duration": 49,
-                  "state": "passed",
-                  "speed": "medium",
-                  "pass": true,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.getContact(contact.number).should('not.visible');",
                   "err": {},
-                  "uuid": "ec993599-edb1-4d71-a9ad-2b63fc39cc25",
-                  "parentUUID": "4ba2f2e4-f31c-4dc5-85da-2509dfb6b780",
+                  "uuid": "5b45cd66-0266-4d18-a0ae-676347c07c7e",
+                  "parentUUID": null,
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 }
               ],
               "suites": [],
-              "passes": [
-                "bf398f53-c333-4f8d-a1b0-2c7865f3e059",
-                "ec993599-edb1-4d71-a9ad-2b63fc39cc25"
+              "passes": [],
+              "failures": [
+                "4531930a-c2fa-4d3e-b4b9-0cca1a981f4f"
               ],
-              "failures": [],
               "pending": [],
-              "skipped": [],
-              "duration": 3801,
+              "skipped": [
+                "5b45cd66-0266-4d18-a0ae-676347c07c7e"
+              ],
+              "duration": 30120,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -114,7 +119,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "2850f2e5-fafb-4d2a-9c25-98a325048bf9",
+      "uuid": "dfc5e11d-362a-47f3-9995-b4a192992a19",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\contact_save_spec.js",
       "file": "tests\\e2e\\specs\\contact_save_spec.js",
@@ -123,7 +128,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4eb62dcb-2f58-4a93-bf9c-c86be557d5ae",
+          "uuid": "9712df61-3b93-43e7-9425-89df81eba929",
           "title": "Cadastro de Contatos",
           "fullFile": "",
           "file": "",
@@ -132,7 +137,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "c3373acb-aee6-4ffa-8426-5d0ae6ddacb1",
+              "uuid": "2590630e-a557-4807-8d8d-adc31a6550fb",
               "title": "Novo Contato",
               "fullFile": "",
               "file": "",
@@ -141,7 +146,7 @@
               "tests": [],
               "suites": [
                 {
-                  "uuid": "2bf2f388-acdb-4bd5-9d2f-78c54e56510d",
+                  "uuid": "f8fb0168-6732-45be-b454-87131c8a8906",
                   "title": "Quando submeto o cadastro completo",
                   "fullFile": "",
                   "file": "",
@@ -152,35 +157,39 @@
                       "title": "Deve cadastrar esse contato",
                       "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro completo Deve cadastrar esse contato",
                       "timedOut": null,
-                      "duration": 4260,
-                      "state": "passed",
-                      "speed": "slow",
-                      "pass": true,
-                      "fail": false,
+                      "duration": 30075,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
                       "pending": false,
                       "context": null,
                       "code": "cy.contactList().contains(contact.name);",
-                      "err": {},
-                      "uuid": "77dffcc7-6fc1-40d6-a486-655b72562bce",
-                      "parentUUID": "2bf2f388-acdb-4bd5-9d2f-78c54e56510d",
+                      "err": {
+                        "message": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Cadastro de Contatos'",
+                        "estack": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Cadastro de Contatos'\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:72513:23\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:115344:41\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114812:14)",
+                        "diff": null
+                      },
+                      "uuid": "4c0443a5-82dc-4df2-8271-2afb79e1c222",
+                      "parentUUID": null,
                       "isHook": false,
                       "skipped": false
                     }
                   ],
                   "suites": [],
-                  "passes": [
-                    "77dffcc7-6fc1-40d6-a486-655b72562bce"
+                  "passes": [],
+                  "failures": [
+                    "4c0443a5-82dc-4df2-8271-2afb79e1c222"
                   ],
-                  "failures": [],
                   "pending": [],
                   "skipped": [],
-                  "duration": 4260,
+                  "duration": 30075,
                   "root": false,
                   "rootEmpty": false,
                   "_timeout": 2000
                 },
                 {
-                  "uuid": "4bd413e1-a22e-4d92-8f9b-8f9d7e37183d",
+                  "uuid": "4a61b478-4201-4984-8dbf-4188813e450a",
                   "title": "Quando submeto o cadastro sem o nome",
                   "fullFile": "",
                   "file": "",
@@ -188,38 +197,38 @@
                   "afterHooks": [],
                   "tests": [
                     {
-                      "title": "Deve deve mostrar uma notificação",
-                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o nome Deve deve mostrar uma notificação",
+                      "title": "Deve exibir a notificação: ${expectNotice}",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o nome Deve exibir a notificação: ${expectNotice}",
                       "timedOut": null,
-                      "duration": 1878,
-                      "state": "passed",
-                      "speed": "slow",
-                      "pass": true,
+                      "duration": 0,
+                      "state": "skipped",
+                      "speed": null,
+                      "pass": false,
                       "fail": false,
                       "pending": false,
                       "context": null,
-                      "code": "cy.alertName().contains('Nome é Obrigatório');",
+                      "code": "cy.alertName().contains(expectNotice);",
                       "err": {},
-                      "uuid": "7ee27a23-a363-4317-a5a4-1ed3c4890f7c",
-                      "parentUUID": "4bd413e1-a22e-4d92-8f9b-8f9d7e37183d",
+                      "uuid": "a561771b-1193-48cf-bb3d-5b2e224e0ef1",
+                      "parentUUID": null,
                       "isHook": false,
-                      "skipped": false
+                      "skipped": true
                     }
                   ],
                   "suites": [],
-                  "passes": [
-                    "7ee27a23-a363-4317-a5a4-1ed3c4890f7c"
-                  ],
+                  "passes": [],
                   "failures": [],
                   "pending": [],
-                  "skipped": [],
-                  "duration": 1878,
+                  "skipped": [
+                    "a561771b-1193-48cf-bb3d-5b2e224e0ef1"
+                  ],
+                  "duration": 0,
                   "root": false,
                   "rootEmpty": false,
                   "_timeout": 2000
                 },
                 {
-                  "uuid": "f6d0fe17-058c-4176-bfa2-cf4e63068a47",
+                  "uuid": "3e8c2c3b-c552-4899-a873-c1f50f2da4e9",
                   "title": "Quando submeto o cadastro sem o whatsapp",
                   "fullFile": "",
                   "file": "",
@@ -227,38 +236,38 @@
                   "afterHooks": [],
                   "tests": [
                     {
-                      "title": "Deve deve mostrar uma notificação",
-                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o whatsapp Deve deve mostrar uma notificação",
+                      "title": "Deve exibir a notificação: ${expectNotice}",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o whatsapp Deve exibir a notificação: ${expectNotice}",
                       "timedOut": null,
-                      "duration": 1821,
-                      "state": "passed",
-                      "speed": "slow",
-                      "pass": true,
+                      "duration": 0,
+                      "state": "skipped",
+                      "speed": null,
+                      "pass": false,
                       "fail": false,
                       "pending": false,
                       "context": null,
-                      "code": "cy.alertNumber().contains('Whatsapp é Obrigatório');",
+                      "code": "cy.alertNumber().contains(expectNotice);",
                       "err": {},
-                      "uuid": "52c76f59-b184-454f-88b6-9ee154f7fa6a",
-                      "parentUUID": "f6d0fe17-058c-4176-bfa2-cf4e63068a47",
+                      "uuid": "b8a9b008-9213-4bde-acb7-54eb4d5fab81",
+                      "parentUUID": null,
                       "isHook": false,
-                      "skipped": false
+                      "skipped": true
                     }
                   ],
                   "suites": [],
-                  "passes": [
-                    "52c76f59-b184-454f-88b6-9ee154f7fa6a"
-                  ],
+                  "passes": [],
                   "failures": [],
                   "pending": [],
-                  "skipped": [],
-                  "duration": 1821,
+                  "skipped": [
+                    "b8a9b008-9213-4bde-acb7-54eb4d5fab81"
+                  ],
+                  "duration": 0,
                   "root": false,
                   "rootEmpty": false,
                   "_timeout": 2000
                 },
                 {
-                  "uuid": "2bf41aff-caaf-4988-bbf9-652c71fcdec1",
+                  "uuid": "3907e09d-62b7-4a1b-a4dc-e3b74dde39ea",
                   "title": "Quando submeto o cadastro sem o assunto",
                   "fullFile": "",
                   "file": "",
@@ -266,32 +275,32 @@
                   "afterHooks": [],
                   "tests": [
                     {
-                      "title": "Deve deve mostrar uma notificação",
-                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o assunto Deve deve mostrar uma notificação",
+                      "title": "Deve exibir a notificação: ${expectNotice}",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o assunto Deve exibir a notificação: ${expectNotice}",
                       "timedOut": null,
-                      "duration": 1271,
-                      "state": "passed",
-                      "speed": "slow",
-                      "pass": true,
+                      "duration": 0,
+                      "state": "skipped",
+                      "speed": null,
+                      "pass": false,
                       "fail": false,
                       "pending": false,
                       "context": null,
-                      "code": "cy.alertDesc().contains('Assunto é Obrigatório');",
+                      "code": "cy.alertDesc().contains(expectNotice);",
                       "err": {},
-                      "uuid": "49436d0b-dc84-4336-ae90-31133ae44f9e",
-                      "parentUUID": "2bf41aff-caaf-4988-bbf9-652c71fcdec1",
+                      "uuid": "6a135c6b-9221-49e2-b388-afdd4ab3840e",
+                      "parentUUID": null,
                       "isHook": false,
-                      "skipped": false
+                      "skipped": true
                     }
                   ],
                   "suites": [],
-                  "passes": [
-                    "49436d0b-dc84-4336-ae90-31133ae44f9e"
-                  ],
+                  "passes": [],
                   "failures": [],
                   "pending": [],
-                  "skipped": [],
-                  "duration": 1271,
+                  "skipped": [
+                    "6a135c6b-9221-49e2-b388-afdd4ab3840e"
+                  ],
+                  "duration": 0,
                   "root": false,
                   "rootEmpty": false,
                   "_timeout": 2000
@@ -327,7 +336,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "bad12194-c2a4-42fb-ac4d-a60657ac8fc7",
+      "uuid": "2611efbf-6591-4aa0-b8d3-7876c060504d",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\contact_search_spec.js",
       "file": "tests\\e2e\\specs\\contact_search_spec.js",
@@ -336,7 +345,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6ac607da-07c5-4094-8614-510efc710392",
+          "uuid": "4f8f8a00-47fb-4dd6-8431-1b56a910bb9c",
           "title": "Busca",
           "fullFile": "",
           "file": "",
@@ -345,7 +354,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "a8a1be5f-23cd-48e3-8d62-84be4adadc27",
+              "uuid": "ed3ada4a-7cdc-48e3-961d-f8dabe1c9c03",
               "title": "Dado que eu tenho o seguinte contato Mike Portnoy",
               "fullFile": "",
               "file": "",
@@ -356,17 +365,21 @@
                   "title": "Quando eu faço a busca desse contato",
                   "fullTitle": "Busca Dado que eu tenho o seguinte contato Mike Portnoy Quando eu faço a busca desse contato",
                   "timedOut": null,
-                  "duration": 2835,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
+                  "duration": 30110,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.dash();\ncy.searchContact(contact.number);\ncy.get('#loader', {\n  timeout: 5000\n}).should('not.visible');",
-                  "err": {},
-                  "uuid": "a4206043-81b2-4dc1-bbfe-1e5ee1d6267f",
-                  "parentUUID": "a8a1be5f-23cd-48e3-8d62-84be4adadc27",
+                  "err": {
+                    "message": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Busca'",
+                    "estack": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Busca'\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:72513:23\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:115344:41\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "f00b344f-4d9a-44b3-b91e-7cddf23eab4b",
+                  "parentUUID": null,
                   "isHook": false,
                   "skipped": false
                 },
@@ -374,36 +387,37 @@
                   "title": "Devo ver somente este contato no dashboard",
                   "fullTitle": "Busca Dado que eu tenho o seguinte contato Mike Portnoy Devo ver somente este contato no dashboard",
                   "timedOut": null,
-                  "duration": 58,
-                  "state": "passed",
-                  "speed": "medium",
-                  "pass": true,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.contactItem().should('have.length', 1);\ncy.contactItem().contains(contact.name);\ncy.contactItem().contains(contact.number);\ncy.contactItem().contains(contact.description);",
                   "err": {},
-                  "uuid": "a2392dcd-bccc-4d88-9697-9ca4fe671ce1",
-                  "parentUUID": "a8a1be5f-23cd-48e3-8d62-84be4adadc27",
+                  "uuid": "a0db4e8d-b659-4d8e-af9a-fdd6cf8be51b",
+                  "parentUUID": null,
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 }
               ],
               "suites": [],
-              "passes": [
-                "a4206043-81b2-4dc1-bbfe-1e5ee1d6267f",
-                "a2392dcd-bccc-4d88-9697-9ca4fe671ce1"
+              "passes": [],
+              "failures": [
+                "f00b344f-4d9a-44b3-b91e-7cddf23eab4b"
               ],
-              "failures": [],
               "pending": [],
-              "skipped": [],
-              "duration": 2893,
+              "skipped": [
+                "a0db4e8d-b659-4d8e-af9a-fdd6cf8be51b"
+              ],
+              "duration": 30110,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "4a1c3990-a924-4935-8442-485bddc3f611",
+              "uuid": "df99c4b9-0c99-4dd5-a59f-081e83f6f742",
               "title": "Dado busco por um contato não cadastrado",
               "fullFile": "",
               "file": "",
@@ -414,29 +428,29 @@
                   "title": "Deve retornar mensagem de alerta",
                   "fullTitle": "Busca Dado busco por um contato não cadastrado Deve retornar mensagem de alerta",
                   "timedOut": null,
-                  "duration": 861,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.get('.message-body').contains('Contato não encontrado :(');",
                   "err": {},
-                  "uuid": "2d70585a-0bc2-4b5c-81ee-23dabd89e1a8",
-                  "parentUUID": "4a1c3990-a924-4935-8442-485bddc3f611",
+                  "uuid": "40b8b17d-2dd5-4385-833d-b75c536a7f6c",
+                  "parentUUID": null,
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 }
               ],
               "suites": [],
-              "passes": [
-                "2d70585a-0bc2-4b5c-81ee-23dabd89e1a8"
-              ],
+              "passes": [],
               "failures": [],
               "pending": [],
-              "skipped": [],
-              "duration": 861,
+              "skipped": [
+                "40b8b17d-2dd5-4385-833d-b75c536a7f6c"
+              ],
+              "duration": 0,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -462,7 +476,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "a6e80518-5957-4b04-955e-f82619cc5dfa",
+      "uuid": "1fc6bab7-c80e-4808-b369-d1bc69a672b3",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\contact_talk_spec.js",
       "file": "tests\\e2e\\specs\\contact_talk_spec.js",
@@ -471,7 +485,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c86e7636-1780-4fe4-b025-ed9c9e682664",
+          "uuid": "42f55599-5045-4393-b2e2-22d0b8c201ad",
           "title": "Conversar",
           "fullFile": "",
           "file": "",
@@ -480,7 +494,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+              "uuid": "603b8d86-6890-40df-8ad4-38105bb0a78d",
               "title": "Dado que Jo Jo Todynho é um bom contato",
               "fullFile": "",
               "file": "",
@@ -491,17 +505,21 @@
                   "title": "Quando acesso o dashboard",
                   "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Quando acesso o dashboard",
                   "timedOut": null,
-                  "duration": 2606,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
+                  "duration": 30055,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.dash();",
-                  "err": {},
-                  "uuid": "e5d8cac2-0619-437c-b50f-fdcbd48faf54",
-                  "parentUUID": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+                  "err": {
+                    "message": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Conversar'",
+                    "estack": "CypressError: cy.request() timed out waiting 30000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/user\n\nNo response was received within the timeout.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Conversar'\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:72513:23\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:115344:41\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114812:14)",
+                    "diff": null
+                  },
+                  "uuid": "454e3046-55ed-4dce-a56b-4f6fb0f4b337",
+                  "parentUUID": null,
                   "isHook": false,
                   "skipped": false
                 },
@@ -509,30 +527,31 @@
                   "title": "Devo ver a propriedade href com o link do whatsapp web",
                   "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Devo ver a propriedade href com o link do whatsapp web",
                   "timedOut": null,
-                  "duration": 55,
-                  "state": "passed",
-                  "speed": "medium",
-                  "pass": true,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "var externalLink = \"https://api.whatsapp.com/send?phone=55\".concat(contact.number);\ncy.get(\"a[href$=\\\"\".concat(contact.number, \"\\\"]\")).should('have.attr', 'href', externalLink);",
                   "err": {},
-                  "uuid": "47e7f824-2b38-45e8-a814-f2531e132018",
-                  "parentUUID": "7adebd15-60cc-46a3-b2b8-00d1ada11771",
+                  "uuid": "d7cb925f-b310-4131-bb87-971701090b65",
+                  "parentUUID": null,
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 }
               ],
               "suites": [],
-              "passes": [
-                "e5d8cac2-0619-437c-b50f-fdcbd48faf54",
-                "47e7f824-2b38-45e8-a814-f2531e132018"
+              "passes": [],
+              "failures": [
+                "454e3046-55ed-4dce-a56b-4f6fb0f4b337"
               ],
-              "failures": [],
               "pending": [],
-              "skipped": [],
-              "duration": 2661,
+              "skipped": [
+                "d7cb925f-b310-4131-bb87-971701090b65"
+              ],
+              "duration": 30055,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -558,7 +577,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "0e4eb291-0e71-459d-9ce6-b8d12b190280",
+      "uuid": "85e587ba-81fb-469b-bd1c-be16d73ba35f",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\login_spec.js",
       "file": "tests\\e2e\\specs\\login_spec.js",
@@ -567,7 +586,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7378b49f-a9b0-4623-8e2e-157ea2dcbbd9",
+          "uuid": "200f8a60-9b63-408d-9690-cbc00cfed73e",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -576,7 +595,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "9b254b73-4e9e-4133-b5eb-103a4a4cfa75",
+              "uuid": "532b09da-6cac-44aa-a961-c1ca16baf350",
               "title": "Quando submeto credenciais validas",
               "fullFile": "",
               "file": "",
@@ -584,10 +603,10 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando submeto credenciais validas deve exibir o dashboard",
+                  "title": "Deve exibir a área logada",
+                  "fullTitle": "Login Quando submeto credenciais validas Deve exibir a área logada",
                   "timedOut": null,
-                  "duration": 1985,
+                  "duration": 4482,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -596,65 +615,65 @@
                   "context": null,
                   "code": "cy.contains('h4', 'Seu gerenciador digital de contatos').should('be.visible');",
                   "err": {},
-                  "uuid": "86cb8877-c5e2-4302-bd9d-685f202591ef",
-                  "parentUUID": "9b254b73-4e9e-4133-b5eb-103a4a4cfa75",
+                  "uuid": "44b2782e-d557-4dfe-8e98-53f9fab6000d",
+                  "parentUUID": "532b09da-6cac-44aa-a961-c1ca16baf350",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "86cb8877-c5e2-4302-bd9d-685f202591ef"
+                "44b2782e-d557-4dfe-8e98-53f9fab6000d"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1985,
+              "duration": 4482,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "47d07640-d5b1-4f2a-bbcb-5678eb4986ef",
-              "title": "Quando submeto uma seha incorreta",
+              "uuid": "ad766f9b-423c-41ab-85d6-d434b55e8f2f",
+              "title": "Quando submeto senha incorreta",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando submeto uma seha incorreta deve exibir o dashboard",
+                  "title": "Deve exibir Email eou senha incorretos",
+                  "fullTitle": "Login Quando submeto senha incorreta Deve exibir Email eou senha incorretos",
                   "timedOut": null,
-                  "duration": 1320,
+                  "duration": 1140,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.loginAlert('Email e/ou senha incorretos!').should('be.visible');",
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "01bcfcf6-b021-49b4-ad53-65ec3787223b",
-                  "parentUUID": "47d07640-d5b1-4f2a-bbcb-5678eb4986ef",
+                  "uuid": "44457e5c-bd43-42b5-b143-6517b7085f61",
+                  "parentUUID": "ad766f9b-423c-41ab-85d6-d434b55e8f2f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "01bcfcf6-b021-49b4-ad53-65ec3787223b"
+                "44457e5c-bd43-42b5-b143-6517b7085f61"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1320,
+              "duration": 1140,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "45b9514f-0128-40ca-a06a-d39d12837fe3",
+              "uuid": "3c6bb893-5e41-477d-a5f7-f67ea5a5b389",
               "title": "Quando não informo o email",
               "fullFile": "",
               "file": "",
@@ -662,38 +681,38 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando não informo o email deve exibir o dashboard",
+                  "title": "Deve exibir Oops. Por favor informe o seu email",
+                  "fullTitle": "Login Quando não informo o email Deve exibir Oops. Por favor informe o seu email",
                   "timedOut": null,
-                  "duration": 656,
+                  "duration": 673,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.loginAlert('Oops. Por favor informe o seu email').should('be.visible');",
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "13ce09e1-637a-490f-828c-c23fd1fc0776",
-                  "parentUUID": "45b9514f-0128-40ca-a06a-d39d12837fe3",
+                  "uuid": "0f7a58cc-a564-453f-b915-09723fc2179a",
+                  "parentUUID": "3c6bb893-5e41-477d-a5f7-f67ea5a5b389",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "13ce09e1-637a-490f-828c-c23fd1fc0776"
+                "0f7a58cc-a564-453f-b915-09723fc2179a"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 656,
+              "duration": 673,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "288f12d9-ac6f-4e23-a042-55d482c9cbf8",
+              "uuid": "90f33f72-facf-4b67-aeb8-bd4a0f256e8c",
               "title": "Quando não informo a senha",
               "fullFile": "",
               "file": "",
@@ -701,32 +720,778 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando não informo a senha deve exibir o dashboard",
+                  "title": "Deve exibir Oops. Por favor informe sua senha",
+                  "fullTitle": "Login Quando não informo a senha Deve exibir Oops. Por favor informe sua senha",
                   "timedOut": null,
-                  "duration": 885,
+                  "duration": 826,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.loginAlert('Oops. Por favor informe sua senha').should('be.visible');",
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "10a849a9-2fdc-47e6-a3d8-3a57e149d1fd",
-                  "parentUUID": "288f12d9-ac6f-4e23-a042-55d482c9cbf8",
+                  "uuid": "abaf25d2-fd19-443a-82a6-eba0d9f4efea",
+                  "parentUUID": "90f33f72-facf-4b67-aeb8-bd4a0f256e8c",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "10a849a9-2fdc-47e6-a3d8-3a57e149d1fd"
+                "abaf25d2-fd19-443a-82a6-eba0d9f4efea"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 885,
+              "duration": 826,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f290815f-58e8-4e0d-b1ef-d69f41301e7c",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\contact_remove_spec.js",
+      "file": "tests\\e2e\\specs\\contact_remove_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2916724-c6b8-4328-a3b3-5093c318eee3",
+          "title": "Remover Contato",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a6ddfb8b-8bd6-4d88-9717-f2ea6293d570",
+              "title": "Dado que Paulo Gilberto é um contato indesejado",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando eu apago esse contato",
+                  "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Quando eu apago esse contato",
+                  "timedOut": null,
+                  "duration": 2727,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dash();\ncy.removeContact(contact.number);",
+                  "err": {},
+                  "uuid": "3c76e675-68d6-46d7-af6e-622ed899ede2",
+                  "parentUUID": "a6ddfb8b-8bd6-4d88-9717-f2ea6293d570",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Não deve exibir no dashboard",
+                  "fullTitle": "Remover Contato Dado que Paulo Gilberto é um contato indesejado Não deve exibir no dashboard",
+                  "timedOut": null,
+                  "duration": 32,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.getContact(contact.number).should('not.visible');",
+                  "err": {},
+                  "uuid": "f8a89f58-d7c7-4eed-a2a3-0877e1b7b886",
+                  "parentUUID": "a6ddfb8b-8bd6-4d88-9717-f2ea6293d570",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3c76e675-68d6-46d7-af6e-622ed899ede2",
+                "f8a89f58-d7c7-4eed-a2a3-0877e1b7b886"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2759,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b87c4bb6-8681-45fc-9e26-19fd6ab85963",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\contact_save_spec.js",
+      "file": "tests\\e2e\\specs\\contact_save_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "425b6781-f487-4cad-841f-c948d3539916",
+          "title": "Cadastro de Contatos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "dd1140d7-f6c0-45a8-a65c-82d32e7bb2bb",
+              "title": "Novo Contato",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "7dbe72fd-b1bf-4465-a9f5-f2f8c609ed0f",
+                  "title": "Quando submeto o cadastro completo",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve cadastrar esse contato",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro completo Deve cadastrar esse contato",
+                      "timedOut": null,
+                      "duration": 3887,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.contactList().contains(contact.name);",
+                      "err": {},
+                      "uuid": "493f5c96-a4fb-4afb-894d-8d54fef6682c",
+                      "parentUUID": "7dbe72fd-b1bf-4465-a9f5-f2f8c609ed0f",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "493f5c96-a4fb-4afb-894d-8d54fef6682c"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 3887,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "3ef70c8c-ffc4-4acd-bb4b-4035d5007b66",
+                  "title": "Quando submeto o cadastro sem o nome",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve exibir a notificação: ${expectNotice}",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o nome Deve exibir a notificação: ${expectNotice}",
+                      "timedOut": null,
+                      "duration": 5778,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.alertName().contains(expectNotice);",
+                      "err": {
+                        "message": "CypressError: Timed out retrying: Expected to find content: 'Nome é obrigatório' within the element: <small.has-text-danger> but never did.",
+                        "estack": "CypressError: Timed out retrying: Expected to find content: 'Nome é obrigatório' within the element: <small.has-text-danger> but never did.\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:8080/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:8080/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114812:14)",
+                        "diff": null
+                      },
+                      "uuid": "8f4feee2-1bfb-4855-aad0-dd79e04a1c1d",
+                      "parentUUID": "3ef70c8c-ffc4-4acd-bb4b-4035d5007b66",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [],
+                  "failures": [
+                    "8f4feee2-1bfb-4855-aad0-dd79e04a1c1d"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 5778,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "3e84570c-70d5-4bbe-8c9f-d143a4ebdc67",
+                  "title": "Quando submeto o cadastro sem o whatsapp",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve exibir a notificação: ${expectNotice}",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o whatsapp Deve exibir a notificação: ${expectNotice}",
+                      "timedOut": null,
+                      "duration": 6186,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.alertNumber().contains(expectNotice);",
+                      "err": {
+                        "message": "CypressError: Timed out retrying: Expected to find content: 'WhatsApp é obrigatório' within the element: <small.has-text-danger> but never did.",
+                        "estack": "CypressError: Timed out retrying: Expected to find content: 'WhatsApp é obrigatório' within the element: <small.has-text-danger> but never did.\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:8080/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:8080/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114812:14)",
+                        "diff": null
+                      },
+                      "uuid": "bf4064a2-bd9c-460f-9f64-4695a0b471b4",
+                      "parentUUID": "3e84570c-70d5-4bbe-8c9f-d143a4ebdc67",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [],
+                  "failures": [
+                    "bf4064a2-bd9c-460f-9f64-4695a0b471b4"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 6186,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "e799519a-ae0a-4089-8af0-e07c150bca4f",
+                  "title": "Quando submeto o cadastro sem o assunto",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve exibir a notificação: ${expectNotice}",
+                      "fullTitle": "Cadastro de Contatos Novo Contato Quando submeto o cadastro sem o assunto Deve exibir a notificação: ${expectNotice}",
+                      "timedOut": null,
+                      "duration": 5389,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.alertDesc().contains(expectNotice);",
+                      "err": {
+                        "message": "CypressError: Timed out retrying: Expected to find content: 'Assunto é obrigatório.' within the element: <small.has-text-danger> but never did.",
+                        "estack": "CypressError: Timed out retrying: Expected to find content: 'Assunto é obrigatório.' within the element: <small.has-text-danger> but never did.\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:8080/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:8080/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:8080/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:8080/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:8080/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:8080/__cypress/runner/cypress_runner.js:114812:14)",
+                        "diff": null
+                      },
+                      "uuid": "acc55568-7653-4a2c-9214-0d08b0364880",
+                      "parentUUID": "e799519a-ae0a-4089-8af0-e07c150bca4f",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [],
+                  "failures": [
+                    "acc55568-7653-4a2c-9214-0d08b0364880"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 5389,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c7d5989d-e6dd-4a3f-a2ef-f9817979ca41",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\contact_search_spec.js",
+      "file": "tests\\e2e\\specs\\contact_search_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "86444a08-1d5d-494d-9f90-c3c14dd5f9a5",
+          "title": "Busca",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "37fd14d3-b4a5-4924-a68f-c23f5498d27a",
+              "title": "Dado que eu tenho o seguinte contato Mike Portnoy",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando eu faço a busca desse contato",
+                  "fullTitle": "Busca Dado que eu tenho o seguinte contato Mike Portnoy Quando eu faço a busca desse contato",
+                  "timedOut": null,
+                  "duration": 2608,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dash();\ncy.searchContact(contact.number);\ncy.get('#loader', {\n  timeout: 5000\n}).should('not.visible');",
+                  "err": {},
+                  "uuid": "dd600299-21ff-42a0-9d4f-61c07359059e",
+                  "parentUUID": "37fd14d3-b4a5-4924-a68f-c23f5498d27a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Devo ver somente este contato no dashboard",
+                  "fullTitle": "Busca Dado que eu tenho o seguinte contato Mike Portnoy Devo ver somente este contato no dashboard",
+                  "timedOut": null,
+                  "duration": 47,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contactItem().should('have.length', 1);\ncy.contactItem().contains(contact.name);\ncy.contactItem().contains(contact.number);\ncy.contactItem().contains(contact.description);",
+                  "err": {},
+                  "uuid": "95e99939-2822-41cc-91b5-b1d76fdd1734",
+                  "parentUUID": "37fd14d3-b4a5-4924-a68f-c23f5498d27a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "dd600299-21ff-42a0-9d4f-61c07359059e",
+                "95e99939-2822-41cc-91b5-b1d76fdd1734"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2655,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "78cc7f25-3744-4ada-9da1-236632485f09",
+              "title": "Dado busco por um contato não cadastrado",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve retornar mensagem de alerta",
+                  "fullTitle": "Busca Dado busco por um contato não cadastrado Deve retornar mensagem de alerta",
+                  "timedOut": null,
+                  "duration": 707,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.message-body').contains('Contato não encontrado :(');",
+                  "err": {},
+                  "uuid": "56eab881-9aca-4bb9-a9ef-2cb9de7e560a",
+                  "parentUUID": "78cc7f25-3744-4ada-9da1-236632485f09",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "56eab881-9aca-4bb9-a9ef-2cb9de7e560a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 707,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0276ed74-255f-42a7-997a-f63c82929784",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\contact_talk_spec.js",
+      "file": "tests\\e2e\\specs\\contact_talk_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba0e3cb3-ebe5-48fa-b122-70dd9ae0eac2",
+          "title": "Conversar",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "9117919f-bd72-4e1a-839a-b231239844fd",
+              "title": "Dado que Jo Jo Todynho é um bom contato",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando acesso o dashboard",
+                  "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Quando acesso o dashboard",
+                  "timedOut": null,
+                  "duration": 1746,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.dash();",
+                  "err": {},
+                  "uuid": "8e4a35fc-59c2-434a-810a-28b3a41bf46b",
+                  "parentUUID": "9117919f-bd72-4e1a-839a-b231239844fd",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Devo ver a propriedade href com o link do whatsapp web",
+                  "fullTitle": "Conversar Dado que Jo Jo Todynho é um bom contato Devo ver a propriedade href com o link do whatsapp web",
+                  "timedOut": null,
+                  "duration": 17,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "var externalLink = \"https://api.whatsapp.com/send?phone=55\".concat(contact.number);\ncy.get(\"a[href$=\\\"\".concat(contact.number, \"\\\"]\")).should('have.attr', 'href', externalLink);",
+                  "err": {},
+                  "uuid": "203ec8b7-e7a4-449e-a933-5fd45816d0fd",
+                  "parentUUID": "9117919f-bd72-4e1a-839a-b231239844fd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8e4a35fc-59c2-434a-810a-28b3a41bf46b",
+                "203ec8b7-e7a4-449e-a933-5fd45816d0fd"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1763,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "34c9dee9-1dd6-420c-a91d-9622535075db",
+      "title": "",
+      "fullFile": "tests\\e2e\\specs\\login_spec.js",
+      "file": "tests\\e2e\\specs\\login_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16cdf63c-3555-4602-a044-b3dafbc60a5a",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e937aed8-ec7c-4ba6-8ac0-6546104eb1b0",
+              "title": "Quando submeto credenciais validas",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir a área logada",
+                  "fullTitle": "Login Quando submeto credenciais validas Deve exibir a área logada",
+                  "timedOut": null,
+                  "duration": 1944,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('h4', 'Seu gerenciador digital de contatos').should('be.visible');",
+                  "err": {},
+                  "uuid": "9cd6fff2-2bc3-4ae2-beb0-5d69978591bd",
+                  "parentUUID": "e937aed8-ec7c-4ba6-8ac0-6546104eb1b0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "9cd6fff2-2bc3-4ae2-beb0-5d69978591bd"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1944,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "96171f07-2b2b-433b-8a17-0146ad5cb8a3",
+              "title": "Quando submeto senha incorreta",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir Email eou senha incorretos",
+                  "fullTitle": "Login Quando submeto senha incorreta Deve exibir Email eou senha incorretos",
+                  "timedOut": null,
+                  "duration": 1142,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
+                  "err": {},
+                  "uuid": "0bd3190c-a421-41c5-9309-ac46d1297830",
+                  "parentUUID": "96171f07-2b2b-433b-8a17-0146ad5cb8a3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0bd3190c-a421-41c5-9309-ac46d1297830"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1142,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d655846a-2070-45c5-bf76-b64692da474e",
+              "title": "Quando não informo o email",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir Oops. Por favor informe o seu email",
+                  "fullTitle": "Login Quando não informo o email Deve exibir Oops. Por favor informe o seu email",
+                  "timedOut": null,
+                  "duration": 666,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
+                  "err": {},
+                  "uuid": "73860425-647e-4348-b983-059993513435",
+                  "parentUUID": "d655846a-2070-45c5-bf76-b64692da474e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "73860425-647e-4348-b983-059993513435"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 666,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "9c0f14e3-4897-43b7-b881-0e869084bd73",
+              "title": "Quando não informo a senha",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve exibir Oops. Por favor informe sua senha",
+                  "fullTitle": "Login Quando não informo a senha Deve exibir Oops. Por favor informe sua senha",
+                  "timedOut": null,
+                  "duration": 833,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
+                  "err": {},
+                  "uuid": "bb43faa1-b254-4c0d-a8e6-11f05a398c1d",
+                  "parentUUID": "9c0f14e3-4897-43b7-b881-0e869084bd73",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "bb43faa1-b254-4c0d-a8e6-11f05a398c1d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 833,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

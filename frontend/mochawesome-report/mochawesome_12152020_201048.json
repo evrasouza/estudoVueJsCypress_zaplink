@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-15T22:24:08.670Z",
-    "end": "2020-12-15T22:24:16.350Z",
-    "duration": 7680,
+    "start": "2020-12-15T23:10:41.521Z",
+    "end": "2020-12-15T23:10:48.411Z",
+    "duration": 6890,
     "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0e4eb291-0e71-459d-9ce6-b8d12b190280",
+      "uuid": "34c9dee9-1dd6-420c-a91d-9622535075db",
       "title": "",
       "fullFile": "tests\\e2e\\specs\\login_spec.js",
       "file": "tests\\e2e\\specs\\login_spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7378b49f-a9b0-4623-8e2e-157ea2dcbbd9",
+          "uuid": "16cdf63c-3555-4602-a044-b3dafbc60a5a",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "9b254b73-4e9e-4133-b5eb-103a4a4cfa75",
+              "uuid": "e937aed8-ec7c-4ba6-8ac0-6546104eb1b0",
               "title": "Quando submeto credenciais validas",
               "fullFile": "",
               "file": "",
@@ -44,10 +44,10 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando submeto credenciais validas deve exibir o dashboard",
+                  "title": "Deve exibir a área logada",
+                  "fullTitle": "Login Quando submeto credenciais validas Deve exibir a área logada",
                   "timedOut": null,
-                  "duration": 1985,
+                  "duration": 1944,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,65 +56,65 @@
                   "context": null,
                   "code": "cy.contains('h4', 'Seu gerenciador digital de contatos').should('be.visible');",
                   "err": {},
-                  "uuid": "86cb8877-c5e2-4302-bd9d-685f202591ef",
-                  "parentUUID": "9b254b73-4e9e-4133-b5eb-103a4a4cfa75",
+                  "uuid": "9cd6fff2-2bc3-4ae2-beb0-5d69978591bd",
+                  "parentUUID": "e937aed8-ec7c-4ba6-8ac0-6546104eb1b0",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "86cb8877-c5e2-4302-bd9d-685f202591ef"
+                "9cd6fff2-2bc3-4ae2-beb0-5d69978591bd"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1985,
+              "duration": 1944,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "47d07640-d5b1-4f2a-bbcb-5678eb4986ef",
-              "title": "Quando submeto uma seha incorreta",
+              "uuid": "96171f07-2b2b-433b-8a17-0146ad5cb8a3",
+              "title": "Quando submeto senha incorreta",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando submeto uma seha incorreta deve exibir o dashboard",
+                  "title": "Deve exibir Email eou senha incorretos",
+                  "fullTitle": "Login Quando submeto senha incorreta Deve exibir Email eou senha incorretos",
                   "timedOut": null,
-                  "duration": 1320,
+                  "duration": 1142,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.loginAlert('Email e/ou senha incorretos!').should('be.visible');",
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "01bcfcf6-b021-49b4-ad53-65ec3787223b",
-                  "parentUUID": "47d07640-d5b1-4f2a-bbcb-5678eb4986ef",
+                  "uuid": "0bd3190c-a421-41c5-9309-ac46d1297830",
+                  "parentUUID": "96171f07-2b2b-433b-8a17-0146ad5cb8a3",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "01bcfcf6-b021-49b4-ad53-65ec3787223b"
+                "0bd3190c-a421-41c5-9309-ac46d1297830"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1320,
+              "duration": 1142,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "45b9514f-0128-40ca-a06a-d39d12837fe3",
+              "uuid": "d655846a-2070-45c5-bf76-b64692da474e",
               "title": "Quando não informo o email",
               "fullFile": "",
               "file": "",
@@ -122,38 +122,38 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando não informo o email deve exibir o dashboard",
+                  "title": "Deve exibir Oops. Por favor informe o seu email",
+                  "fullTitle": "Login Quando não informo o email Deve exibir Oops. Por favor informe o seu email",
                   "timedOut": null,
-                  "duration": 656,
+                  "duration": 666,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.loginAlert('Oops. Por favor informe o seu email').should('be.visible');",
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "13ce09e1-637a-490f-828c-c23fd1fc0776",
-                  "parentUUID": "45b9514f-0128-40ca-a06a-d39d12837fe3",
+                  "uuid": "73860425-647e-4348-b983-059993513435",
+                  "parentUUID": "d655846a-2070-45c5-bf76-b64692da474e",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "13ce09e1-637a-490f-828c-c23fd1fc0776"
+                "73860425-647e-4348-b983-059993513435"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 656,
+              "duration": 666,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "288f12d9-ac6f-4e23-a042-55d482c9cbf8",
+              "uuid": "9c0f14e3-4897-43b7-b881-0e869084bd73",
               "title": "Quando não informo a senha",
               "fullFile": "",
               "file": "",
@@ -161,32 +161,32 @@
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "deve exibir o dashboard",
-                  "fullTitle": "Login Quando não informo a senha deve exibir o dashboard",
+                  "title": "Deve exibir Oops. Por favor informe sua senha",
+                  "fullTitle": "Login Quando não informo a senha Deve exibir Oops. Por favor informe sua senha",
                   "timedOut": null,
-                  "duration": 885,
+                  "duration": 833,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.loginAlert('Oops. Por favor informe sua senha').should('be.visible');",
+                  "code": "cy.loginAlert(expectMessage).should('be.visible');",
                   "err": {},
-                  "uuid": "10a849a9-2fdc-47e6-a3d8-3a57e149d1fd",
-                  "parentUUID": "288f12d9-ac6f-4e23-a042-55d482c9cbf8",
+                  "uuid": "bb43faa1-b254-4c0d-a8e6-11f05a398c1d",
+                  "parentUUID": "9c0f14e3-4897-43b7-b881-0e869084bd73",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "10a849a9-2fdc-47e6-a3d8-3a57e149d1fd"
+                "bb43faa1-b254-4c0d-a8e6-11f05a398c1d"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 885,
+              "duration": 833,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
